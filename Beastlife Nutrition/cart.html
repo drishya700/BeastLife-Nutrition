@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .cart-item {
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .cart-item img {
+        max-width: 100px;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .cart-item h3 {
+        margin: 0;
+      }
+      .cart-item p {
+        margin: 5px 0;
+      }
+      .message {
+        margin-top: 15px;
+        text-align: center;
+      }
+      .message.success {
+        color: green;
+      }
+      .message.error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Hello, <span id="username"></span></h2>
+      <div id="cart-items"></div>
+      <div class="message" id="message"></div>
+    </div>
+
+    <script>
+      const apiUrl = "http://localhost:3000";
+      const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+
+      async function fetchCart() {
+        try {
+          const cartResponse = await fetch(`${apiUrl}/cart`, {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+
+          const cartData = await cartResponse.json();
+          const cartItemsDiv = document.getElementById("cart-items");
+          const usernameSpan = document.getElementById("username");
+
+          if (cartResponse.ok) {
+            // Display username
+            usernameSpan.innerText = cartData.username;
+
+            // Fetch product details
+            if (cartData.cart.length > 0) {
+              const productIds = cartData.cart.map(item => item.productId);
+              const productResponse = await fetch(`${apiUrl}/products`, {
+                method: "POST",
+                headers: {
+                  Authorization: `Bearer ${token}`,
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ productIds }),
+              });
+
+              const productsData = await productResponse.json();
+
+              // Display cart items with product details
+              cartItemsDiv.innerHTML = cartData.cart
+                .map((item) => {
+                  const product = productsData.find(p => p._id === item.productId);
+                  return `
+                    <div class="cart-item">
+                      ${product && product.image ? `<img src="${product.image}" alt="${product.name}"/>` : ''}
+                      <h3>${product ? product.name : 'Product not found'}</h3>
+                      <p>Price: ₹${product ? product.price.toFixed(2) : 'N/A'}</p>
+                      <p>Quantity: ${item.quantity}</p>
+                    </div>
+                  `;
+                })
+                .join("");
+            } else {
+              cartItemsDiv.innerHTML = "<p>Your cart is empty.</p>";
+            }
+          } else {
+            document.getElementById("message").innerText = cartData.message;
+          }
+        } catch (error) {
+          console.error("Error fetching cart:", error);
+          document.getElementById("message").innerText = "Error fetching cart.";
+        }
+      }
+      // Fetch cart items on page load
+      fetchCart();
+    </script>
+  </body>
+</html>
