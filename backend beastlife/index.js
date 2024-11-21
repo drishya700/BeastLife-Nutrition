@@ -38,7 +38,7 @@ const productSchema = new mongoose.Schema({
     reviews: { type: Number, default: 0 } 
 });
 
-// const Product = mongoose.model('Product', productSchema);
+const Product = mongoose.model('Product', productSchema);
 
 // // Create some sample products (Run this once to add products)
 // const createProducts = async () => {
