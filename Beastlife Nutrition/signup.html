@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <style>
-        body {
+        /* body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             display: flex;
@@ -49,10 +50,216 @@
             margin-top: 15px;
             text-align: center;
             color: red;
+        } */
+        :root {
+            --font: "Lato", sans-serif;
+            --max-width: 1200px;
+            --radius: 12px;
+            --btn-radius: 4px;
+            --i-padding: 1rem;
+            --o-padding: 2rem;
+        }
+
+        body {
+            margin: 0 var(--o-padding);
+            font-family: var(--font);
+            color: black;
+            background: linear-gradient(0deg, #c5c5c5, #f5f5f5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            width: 100%;
+            min-height: 700px;
+            height: auto;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: var(--radius);
+            display: flex;
+            box-shadow: 0 10px 1rem #0004;
+            flex-direction: row;
+        }
+
+        .back {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url("assets/images/EulHW7S - Imgur.jpg") center / cover no-repeat;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .brand {
+            width: 40%;
+            padding: var(--i-padding);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            pointer-events: none;
+            max-width: 100%;
+        }
+
+        .brand .logo img {
+            max-width: 100px;
+            /* Increase logo size */
+            height: auto;
+        }
+
+        .brand .logo h1 {
+            color: #392f32;
+            text-transform: uppercase;
+            font-size: 28px;
+            font-weight: 400;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .formWrapper {
+            width: 60%;
+            padding: var(--o-padding);
+            background: #fff1;
+            border-left: solid 1px #0001;
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+        }
+
+        .formWrapper .form {
+            width: 100%;
+            max-width: 450px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--i-padding);
+        }
+
+        .formWrapper .form h2 {
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 400;
+            padding-bottom: 10px;
+            border-bottom: solid 1px #0001;
+        }
+
+        .form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .inputWrapper {
+            display: flex;
+            position: relative;
+            width: 100%;
+        }
+
+        .inputWrapper input {
+            border: none;
+            font-size: 16px;
+            outline: 0;
+            border-radius: var(--btn-radius);
+            background: #fff2;
+            border: solid 1px #0001;
+            padding: var(--i-padding);
+            width: 100%;
+        }
+
+        .inputWrapper label {
+            padding: 4px 6px;
+            color: #0006;
+            position: absolute;
+            left: 1rem;
+            top: 10px;
+            transform-origin: left;
+            transform: scale(1);
+            transition: all 0.2s ease;
+        }
+
+        .inputWrapper input:focus+label,
+        .inputWrapper input:valid+label {
+            color: #fff;
+            text-shadow: 0 1px 4px #0009;
+            top: -14px;
+            left: 11px;
+            transform: scale(0.8);
+        }
+
+        #register {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            height: 47px;
+            width: 100%;
+            max-width: 230px;
+            background: #0007;
+            padding: var(--i-padding);
+            color: #fff;
+            border-radius: var(--btn-radius);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        #register:hover {
+            background: #000;
+        }
+
+        #login {
+            font-size: 14px;
+            font-weight: 300;
+            color: #fff9;
+            margin: 0 auto;
+            margin-top: -20px;
+        }
+
+        #login a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 860px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .container .brand,
+            .container .formWrapper {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .brand .logo img {
+                max-width: 80px;
+                /* Adjust logo size for smaller screens */
+            }
+
+            .brand .logo h1 {
+                font-size: 24px;
+                text-align: center;
+            }
         }
     </style>
 </head>
-<body>
+<!-- <body>
     <div class="container">
         <h2>Signup</h2>
         <div>
@@ -91,5 +298,54 @@
             }
         }
     </script>
+</body> -->
+
+<body id="signup">
+    <main class="container">
+        <div class="back"></div>
+        <div class="brand">
+            <div class="logo">
+                <img height="64" src="assets/images/logo.png" alt="BeastLife Logo" />
+                <h1>
+                    <span class="name"><span>BeastLife</span><span>Nutrition</span></span>
+                </h1>
+            </div>
+
+        </div>
+        <div class="formWrapper">
+            <div class="form">
+                <h2>New member</h2>
+                <form id="form" method="get" action="#">
+                    <div class="inputWrapper">
+                        <input type="text" name="first" id="first" required />
+                        <label for="first">First Name</label>
+                    </div>
+                    <div class="inputWrapper">
+                        <input type="text" name="last" id="last" required />
+                        <label for="last">Last Name</label>
+                    </div>
+                    <div class="inputWrapper">
+                        <input type="email" name="email" id="email" required />
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="inputWrapper">
+                        <input type="tel" name="phone" id="phone" required />
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <div class="inputWrapper">
+                        <input type="password" name="password" id="password" required />
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="inputWrapper">
+                        <input type="password" name="c_password" id="c_password" required />
+                        <label for="c_password">Confirm Password</label>
+                    </div>
+                </form>
+                <input form="form" type="submit" name="register" id="register" value="REGISTER" />
+                <span id="login">Already a member? <a href="#" title="Login">Log in!</a></span>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
