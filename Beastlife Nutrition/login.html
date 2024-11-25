@@ -29,5 +29,32 @@
       </div>
     </form>
   </div>
+  <script>
+    const apiUrl = "http://localhost:3000";
+
+    async function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const response = await fetch(`${apiUrl}/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+      const messageDiv = document.getElementById("message");
+      if (response.ok) {
+        localStorage.setItem("token", data.token); // Store the token
+        messageDiv.style.color = "green";
+        messageDiv.innerText = "Login successful!";
+
+        window.location.href = "/index.html";
+      } else {
+        messageDiv.style.color = "red";
+        messageDiv.innerText = data.message;
+      }
+    }
+  </script>
 </body>
 </html>

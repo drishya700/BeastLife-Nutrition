@@ -122,7 +122,7 @@ const authenticate = (req, res, next) => {
     // Verify the token
     jwt.verify(token, secretKey, (err, user) => {
         if (err) {
-            console.error('Token verification error:', err); // Log any errors during verification
+            console.error('Token verification error:', err.message); // Log any errors during verification
             return res.status(401).json({ message: 'Unauthorized' });
         }
         req.user = user;
