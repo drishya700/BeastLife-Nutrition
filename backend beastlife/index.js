@@ -12,7 +12,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/beastlife');
+mongoose.connect('mongodb://localhost:27017/beastlife').then(()=>{
+    console.log("Connected to Mongo")
+})
 
 // Define User Schema
 const userSchema = new mongoose.Schema({
