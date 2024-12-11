@@ -1,349 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BeastLife Nutrition -Unleash Your Inner Beast</title>
 
-    <!-- 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>BeastLife Nutrition -Unleash Your Inner Beast</title>
+
+  <!-- 
     - favicon
   -->
-    <link rel="shortcut icon" href="./logo.png" type="image/png" />
+  <link rel="shortcut icon" href="./logo.png" type="image/png" />
 
-    <!-- 
+  <!-- 
     - custom css link
   -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- 
+  <!-- 
     - google font link
   -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
-    <!-- 
+  <!-- 
     - preload images
   -->
-    <link rel="preload" as="image" href="./assets/images/logo.png" />
-    <link rel="preload" as="image" href="./assets/images/banner1.png" />
-    <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg" />
-    <link rel="preload" as="image" href="./assets/images/hero-banner-3.jpg" />
-  </head>
+  <link rel="preload" as="image" href="./assets/images/logo.png" />
+  <link rel="preload" as="image" href="./assets/images/banner1.png" />
+  <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg" />
+  <link rel="preload" as="image" href="./assets/images/hero-banner-3.jpg" />
+</head>
 
-  <body id="top">
-    <!-- 
+<body id="top">
+  <!-- 
     - #HEADER
   -->
 
-    <header class="header">
-      <div class="alert">
-        <div class="container">
-          <p class="alert-text">Free Shipping On All Indian Orders ₹1000+</p>
+  <header class="header">
+    <div class="alert">
+      <div class="container">
+        <div class="slide-container">
+          <div class="slide active">
+            <p class="alert-text">Free Shipping On All Indian Orders ₹1000+</p>
+          </div>
+          <div class="slide">
+            <p class="alert-text">Offer 2: 20% off on Protein Powders</p>
+          </div>
+          <div class="slide">
+            <p class="alert-text">Offer 3: Buy 1 Get 1 Free on Supplements</p>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="header-top" data-header>
-        <div class="container">
-          <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-            <span class="line line-1"></span>
-            <span class="line line-2"></span>
-            <span class="line line-3"></span>
+    <div class="header-top" data-header>
+      <div class="container">
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+        <div class="input-wrapper">
+          <input type="search" name="search" placeholder="Search product" class="search-field" />
+
+          <button class="search-submit" aria-label="search">
+            <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.png" width="179" height="26" alt="BeastLife" />
+        </a>
+
+        <div class="header-actions">
+          <button class="header-action-btn" aria-label="user">
+            <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
           </button>
 
-          <div class="input-wrapper">
-            <input
-              type="search"
-              name="search"
-              placeholder="Search product"
-              class="search-field"
-            />
+          <button class="header-action-btn" aria-label="favourite item">
+            <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
 
-            <button class="search-submit" aria-label="search">
-              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-            </button>
-          </div>
+            <span class="btn-badge">0</span>
+          </button>
 
-          <a href="#" class="logo">
-            <img
-              src="./assets/images/logo.png"
-              width="179"
-              height="26"
-              alt="BeastLife"
-            />
+          <a href="/cart.html" class="header-action-btn" aria-label="cart item">
+            <data class="btn-text" value="0">₹0.00</data>
+            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+            <span class="btn-badge">0</span>
           </a>
-
-          <div class="header-actions">
-            <button class="header-action-btn" aria-label="user">
-              <ion-icon
-                name="person-outline"
-                aria-hidden="true"
-                aria-hidden="true"
-              ></ion-icon>
-            </button>
-
-            <button class="header-action-btn" aria-label="favourite item">
-              <ion-icon
-                name="star-outline"
-                aria-hidden="true"
-                aria-hidden="true"
-              ></ion-icon>
-
-              <span class="btn-badge">0</span>
-            </button>
-
-            <a href="/cart.html" class="header-action-btn" aria-label="cart item">
-              <data class="btn-text" value="0">₹0.00</data>
-              <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-              <span class="btn-badge">0</span>
-            </a>
-          </div>
-
-          <nav class="navbar">
-            <ul class="navbar-list">
-              <li>
-                <a href="#home" class="navbar-link has-after">Home</a>
-              </li>
-
-              <li>
-                <a href="#collection" class="navbar-link has-after"
-                  >Collection</a
-                >
-              </li>
-
-              <li>
-                <a href="#shop" class="navbar-link has-after">Shop</a>
-              </li>
-
-              <li>
-                <a href="#offer" class="navbar-link has-after">Offer</a>
-              </li>
-
-              <li>
-                <a href="#blog" class="navbar-link has-after">Blog</a>
-              </li>
-            </ul>
-          </nav>
         </div>
-      </div>
-    </header>
 
-    <!-- 
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li>
+              <a href="#home" class="navbar-link has-after">Home</a>
+            </li>
+
+            <li>
+              <a href="#collection" class="navbar-link has-after">Collection</a>
+            </li>
+
+            <li>
+              <a href="#shop" class="navbar-link has-after">Shop</a>
+            </li>
+
+            <li>
+              <a href="#offer" class="navbar-link has-after">Offer</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="navbar-link has-after">Blog</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- 
     - #MOBILE NAVBAR
   -->
 
-    <div class="sidebar">
-      <div class="mobile-navbar" data-navbar>
-        <div class="wrapper">
-          <a href="#" class="logo">
-            <img
-              src="./assets/images/logo.png"
-              width="179"
-              height="26"
-              alt="BeastLife"
-            />
-          </a>
+  <div class="sidebar">
+    <div class="mobile-navbar" data-navbar>
+      <div class="wrapper">
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.png" width="179" height="26" alt="BeastLife" />
+        </a>
 
-          <button
-            class="nav-close-btn"
-            aria-label="close menu"
-            data-nav-toggler
-          >
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-        </div>
-
-        <ul class="navbar-list">
-          <li>
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
-          </li>
-
-          <li>
-            <a href="#collection" class="navbar-link" data-nav-link
-              >Collection</a
-            >
-          </li>
-
-          <li>
-            <a href="#shop" class="navbar-link" data-nav-link>Shop</a>
-          </li>
-
-          <li>
-            <a href="#offer" class="navbar-link" data-nav-link>Offer</a>
-          </li>
-
-          <li>
-            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
-          </li>
-        </ul>
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
       </div>
 
-      <div class="overlay" data-nav-toggler data-overlay></div>
+      <ul class="navbar-list">
+        <li>
+          <a href="#home" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li>
+          <a href="#collection" class="navbar-link" data-nav-link>Collection</a>
+        </li>
+
+        <li>
+          <a href="#shop" class="navbar-link" data-nav-link>Shop</a>
+        </li>
+
+        <li>
+          <a href="#offer" class="navbar-link" data-nav-link>Offer</a>
+        </li>
+
+        <li>
+          <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+        </li>
+      </ul>
     </div>
 
-    <main>
-      <article>
-        <!-- 
+    <div class="overlay" data-nav-toggler data-overlay></div>
+  </div>
+
+  <main>
+    <article>
+      <!-- 
         - #HERO
       -->
 
-        <section class="section hero" id="home" aria-label="hero" data-section>
-          <div class="container">
-            <ul class="has-scrollbar">
-              <li class="scrollbar-item">
-                <div
-                  class="hero-card has-bg-image"
-                  style="background-image: url('./assets/images/banner1.png')"
-                >
-                  <div class="card-content">
-                    <h1 class="h1 hero-title">
-                      3X Your Gains <br />
-                      With Our Supplements!
-                    </h1>
-
-                    <p class="hero-text">
-                      Clinically-tested & highly caffeinated, our products are
-                      designed for Beasts!
-                    </p>
-
-                    <p class="price">Starting at ₹799</p>
-
-                    <a href="#" class="btn btn-primary">Shop Now</a>
-                  </div>
-                </div>
-              </li>
-
-              <li class="scrollbar-item">
-                <div
-                  class="hero-card has-bg-image"
-                  style="background-image: url('./assets/images/Whey\ Protein\ Banner.jpeg')"
-                >
-                  <div class="card-content">
-                    <h1 class="h1 hero-title" style="color: rgb(255, 115, 0);">
-                      Unleash Your <br />
-                      Inner Beast
-                  </h1>
-                    <p class="hero-text">
-                      Made using clinically-tested, highly caffeinated, our
-                      products are designed for Beasts!
-                    </p>
-
-                    <p class="price">Starting at ₹2199</p>
-
-                    <a href="#" class="btn btn-primary">Shop Now</a>
-                  </div>
-                </div>
-              </li>
-
-              <li class="scrollbar-item">
-                <div
-                  class="hero-card has-bg-image"
-                  style="background-image: url('./assets/images/Coffee\ Beans\(BeastLife\ Nutrition\).jpeg')"
-                >
-                  <div class="card-content">
-                    <h1 class="h1 hero-title" style="color: #8B4513;">
-                      Try Our <br />
-                      Organic Coffee Beans
+      <section class="section hero" id="home" aria-label="hero" data-section>
+        <div class="container">
+          <ul class="has-scrollbar">
+            <li class="scrollbar-item">
+              <div class="hero-card has-bg-image" style="background-image: url('./assets/images/banner1.png')">
+                <div class="card-content">
+                  <h1 class="h1 hero-title">
+                    3X Your Gains <br />
+                    With Our Supplements!
                   </h1>
 
-                    <p class="hero-text">
-                      Finest Coffee Beans Handpicked in Africa, Straight to your
-                      Doorstep!
-                    </p>
+                  <p class="hero-text">
+                    Clinically-tested & highly caffeinated, our products are
+                    designed for Beasts!
+                  </p>
 
-                    <p class="price">Starting at ₹1099</p>
+                  <p class="price">Starting at ₹799</p>
 
-                    <a href="#" class="btn btn-primary">Shop Now</a>
-                  </div>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
                 </div>
-              </li>
-            </ul>
-          </div>
-        </section>
+              </div>
+            </li>
 
-        <!-- 
+            <li class="scrollbar-item">
+              <div class="hero-card has-bg-image"
+                style="background-image: url('./assets/images/Whey\ Protein\ Banner.jpeg')">
+                <div class="card-content">
+                  <h1 class="h1 hero-title" style="color: rgb(255, 115, 0);">
+                    Unleash Your <br />
+                    Inner Beast
+                  </h1>
+                  <p class="hero-text">
+                    Made using clinically-tested, highly caffeinated, our
+                    products are designed for Beasts!
+                  </p>
+
+                  <p class="price">Starting at ₹2199</p>
+
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="hero-card has-bg-image"
+                style="background-image: url('./assets/images/Coffee\ Beans\(BeastLife\ Nutrition\).jpeg')">
+                <div class="card-content">
+                  <h1 class="h1 hero-title" style="color: #8B4513;">
+                    Try Our <br />
+                    Organic Coffee Beans
+                  </h1>
+
+                  <p class="hero-text">
+                    Finest Coffee Beans Handpicked in Africa, Straight to your
+                    Doorstep!
+                  </p>
+
+                  <p class="price">Starting at ₹1099</p>
+
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 
         - #COLLECTION
       -->
 
-        <section
-          class="section collection"
-          id="collection"
-          aria-label="collection"
-          data-section
-        >
-          <div class="container">
-            <ul class="collection-list">
-              <li>
-                <h2 class="h2 card-title">Summer Collection</h2>
-                <p class="card-text">Starting at ₹1099</p>
+      <section class="section collection" id="collection" aria-label="collection" data-section>
+        <div class="container">
+          <ul class="collection-list">
+            <li>
+              <h2 class="h2 card-title">Summer Collection</h2>
+              <p class="card-text">Starting at ₹1099</p>
 
-                <a href="#" class="btn-link">
-                  <span class="span">Shop Now</span>
+              <a href="#" class="btn-link">
+                <span class="span">Shop Now</span>
 
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-                <div class="collection-card has-before hover:shine">
-                  <div
-                    class="has-bg-image"
-                    style="
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+              <div class="collection-card has-before hover:shine">
+                <div class="has-bg-image" style="
                       background-image: url('./assets/images/creatine.jpg');
-                    "
-                  ></div>
-                </div>
-              </li>
+                    "></div>
+              </div>
+            </li>
 
-              <li>
-                <h2 class="h2 card-title">What’s New?</h2>
+            <li>
+              <h2 class="h2 card-title">What’s New?</h2>
 
-                <p class="card-text">Become a Beast!</p>
+              <p class="card-text">Become a Beast!</p>
 
-                <a href="#" class="btn-link">
-                  <span class="span">Discover Now</span>
+              <a href="#" class="btn-link">
+                <span class="span">Discover Now</span>
 
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-                <div class="collection-card has-before hover:shine">
-                  <div
-                    class="has-bg-image"
-                    style="
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+              <div class="collection-card has-before hover:shine">
+                <div class="has-bg-image" style="
                       background-image: url('./assets/images/Whey\ Protein.jpg');
-                    "
-                  ></div>
-                </div>
-              </li>
+                    "></div>
+              </div>
+            </li>
 
-              <li>
-                <h2 class="h2 card-title">Buy 1 Get 1</h2>
+            <li>
+              <h2 class="h2 card-title">Buy 1 Get 1</h2>
 
-                <p class="card-text">Starting at ₹799</p>
+              <p class="card-text">Starting at ₹799</p>
 
-                <a href="#" class="btn-link">
-                  <span class="span">Discover Now</span>
+              <a href="#" class="btn-link">
+                <span class="span">Discover Now</span>
 
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-                <div class="collection-card has-before hover:shine">
-                  <div
-                    class="has-bg-image"
-                    style="
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+              <div class="collection-card has-before hover:shine">
+                <div class="has-bg-image" style="
                       background-image: url('./assets/images/Buy1Get1.png');
-                    "
-                  ></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
+                    "></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <!-- 
+      <!-- 
         - #SHOP
       -->
 
-        <!-- <section class="section shop" id="shop" aria-label="shop" data-section>
+      <!-- <section class="section shop" id="shop" aria-label="shop" data-section>
           <div class="container">
             <div class="title-wrapper">
               <h2 class="h2 section-title">Our Bestsellers</h2>
@@ -753,746 +711,579 @@
           </div>
         </section> -->
 
-        <!-- <h1>Products</h1>
+      <!-- <h1>Products</h1>
         <div class="products-container" id="products"></div>
         <div class="message" id="message"></div> -->
 
-        <section class="section shop" id="shop" aria-label="shop" data-section>
-          
-          <div class="container">
-            <div class="title-wrapper">
-              <h2 class="h2 section-title">Our Bestsellers</h2>
+      <section class="section shop" id="shop" aria-label="shop" data-section>
 
-              <a href="#" class="btn-link">
-                <span class="span">Shop All Products</span>
+        <div class="container">
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Our Bestsellers</h2>
 
-                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-              </a>
-            </div>
+            <a href="#" class="btn-link">
+              <span class="span">Shop All Products</span>
 
-            <ul class="has-scrollbar">
-              <div class="products-container" id="products"></div>
-              <div id="toast" class="toast"></div>
-        <div class="message" id="message"></div>
-            </ul>
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
           </div>
-        </section>
-        <section class="section shop" id="shop" aria-label="shop" data-section>
-          <div class="container">
-            <div class="title-wrapper">
-              <h2 class="h2 section-title">Newly Launched!</h2>
 
-              <a href="#" class="btn-link">
-                <span class="span">Shop All Products</span>
+          <ul class="has-scrollbar">
+            <div class="products-container" id="products"></div>
+            <div id="toast" class="toast"></div>
+            <div class="message" id="message"></div>
+          </ul>
+        </div>
+      </section>
+      <section class="section shop" id="shop" aria-label="shop" data-section>
+        <div class="container">
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Newly Launched!</h2>
 
-                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-              </a>
-            </div>
+            <a href="#" class="btn-link">
+              <span class="span">Shop All Products</span>
 
-            <ul class="has-scrollbar">
-              <li class="scrollbar-item">
-                <div class="shop-card">
-                  <div
-                    class="card-banner img-holder"
-                    style="--width: 540; --height: 720"
-                  >
-                    <img
-                      src="./assets/images/creatine.jpg"
-                      width="540"
-                      height="720"
-                      loading="lazy"
-                      alt="Creatine"
-                      class="img-cover"
-                    />
-
-                    <span class="badge" aria-label="20% off">-20%</span>
-
-                    <div class="card-actions">
-                      <button class="action-btn" aria-label="add to cart">
-                        <ion-icon
-                          name="bag-handle-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-
-                      <button class="action-btn" aria-label="add to whishlist">
-                        <ion-icon
-                          name="star-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-
-                      <button class="action-btn" aria-label="compare">
-                        <ion-icon
-                          name="repeat-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="card-content">
-                    <div class="price">
-                      <del class="del">₹1299</del>
-
-                      <span class="span">₹1,049</span>
-                    </div>
-
-                    <h3>
-                      <a href="#" class="card-title"
-                        >Creatine + Pre-Workout(500mg Caffeine)</a
-                      >
-                    </h3>
-
-                    <div class="card-rating">
-                      <div class="rating-wrapper" aria-label="5 start rating">
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      </div>
-
-                      <p class="rating-text">1048 reviews</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              <li class="scrollbar-item">
-                <div class="shop-card">
-                  <div
-                    class="card-banner img-holder"
-                    style="--width: 540; --height: 720"
-                  >
-                    <img
-                      src="./assets/images/Sipper.png"
-                      width="540"
-                      height="720"
-                      loading="lazy"
-                      alt="Multivitamins"
-                      class="img-cover"
-                    />
-
-                    <div class="card-actions">
-                      <button class="action-btn" aria-label="add to cart">
-                        <ion-icon
-                          name="bag-handle-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-
-                      <button class="action-btn" aria-label="add to whishlist">
-                        <ion-icon
-                          name="star-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-
-                      <button class="action-btn" aria-label="compare">
-                        <ion-icon
-                          name="repeat-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="card-content">
-                    <div class="price">
-                      <span class="span">₹899</span>
-                    </div>
-
-                    <h3>
-                      <a href="#" class="card-title"
-                        >BeastLife Blend Pro Sipper with Straw | 1000ML</a
-                      >
-                    </h3>
-
-                    <div class="card-rating">
-                      <div class="rating-wrapper" aria-label="5 start rating">
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      </div>
-
-                      <p class="rating-text">236 reviews</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              <li class="scrollbar-item">
-                <div class="shop-card">
-                  <div
-                    class="card-banner img-holder"
-                    style="--width: 540; --height: 720"
-                  >
-                    <img
-                      src="./assets/images/Fish_Oil.jpg"
-                      width="540"
-                      height="720"
-                      loading="lazy"
-                      alt="Fish Oil"
-                      class="img-cover"
-                    />
-
-                    <div class="card-actions">
-                      <button class="action-btn" aria-label="add to cart">
-                        <ion-icon
-                          name="bag-handle-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-
-                      <button class="action-btn" aria-label="add to whishlist">
-                        <ion-icon
-                          name="star-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-
-                      <button class="action-btn" aria-label="compare">
-                        <ion-icon
-                          name="repeat-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="card-content">
-                    <div class="price">
-                      <span class="span">₹699</span>
-                    </div>
-
-                    <h3>
-                      <a href="#" class="card-title"
-                        >Omega 3 Fish Oil with 180mg EPA and 120mg DHA</a
-                      >
-                    </h3>
-
-                    <div class="card-rating">
-                      <div class="rating-wrapper" aria-label="5 start rating">
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      </div>
-
-                      <p class="rating-text">342 reviews</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              <li class="scrollbar-item">
-                <div class="shop-card">
-                  <div
-                    class="card-banner img-holder"
-                    style="--width: 540; --height: 720"
-                  >
-                    <img
-                      src="./assets/images/Micronized_Monohydrate.png"
-                      width="540"
-                      height="720"
-                      loading="lazy"
-                      alt="Coffee Bean Caffeine Eye Cream"
-                      class="img-cover"
-                    />
-
-                    <span class="badge" aria-label="20% off">-20%</span>
-
-                    <div class="card-actions">
-                      <button class="action-btn" aria-label="add to cart">
-                        <ion-icon
-                          name="bag-handle-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-
-                      <button class="action-btn" aria-label="add to whishlist">
-                        <ion-icon
-                          name="star-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-
-                      <button class="action-btn" aria-label="compare">
-                        <ion-icon
-                          name="repeat-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="card-content">
-                    <div class="price">
-                      <del class="del">₹1,499</del>
-
-                      <span class="span">₹1,199</span>
-                    </div>
-
-                    <h3>
-                      <a href="#" class="card-title">
-                        Super Micronized Creatine Monohydrate</a
-                      >
-                    </h3>
-
-                    <div class="card-rating">
-                      <div class="rating-wrapper" aria-label="5 start rating">
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      </div>
-
-                      <p class="rating-text">5170 reviews</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              <li class="scrollbar-item">
-                <div class="shop-card">
-                  <div
-                    class="card-banner img-holder"
-                    style="--width: 540; --height: 720"
-                  >
-                    <img
-                      src="./assets/images/Isorich_Blend_Whey.png"
-                      width="540"
-                      height="720"
-                      loading="lazy"
-                      alt="Facial cleanser"
-                      class="img-cover"
-                    />
-
-                    <div class="card-actions">
-                      <button class="action-btn" aria-label="add to cart">
-                        <ion-icon
-                          name="bag-handle-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-
-                      <button class="action-btn" aria-label="add to whishlist">
-                        <ion-icon
-                          name="star-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-
-                      <button class="action-btn" aria-label="compare">
-                        <ion-icon
-                          name="repeat-outline"
-                          aria-hidden="true"
-                        ></ion-icon>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="card-content">
-                    <div class="price">
-                      <span class="span">₹3,499</span>
-                    </div>
-
-                    <h3>
-                      <a href="#" class="card-title"
-                        >Isorich Blend Whey Protein with Ultrasorb Tech |
-                        924G</a
-                      >
-                    </h3>
-
-                    <div class="card-rating">
-                      <div class="rating-wrapper" aria-label="5 start rating">
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      </div>
-
-                      <p class="rating-text">5170 reviews</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
           </div>
-        </section>
 
-        <!-- 
+          <ul class="has-scrollbar">
+            <li class="scrollbar-item">
+              <div class="shop-card">
+                <div class="card-banner img-holder" style="--width: 540; --height: 720">
+                  <img src="./assets/images/creatine.jpg" width="540" height="720" loading="lazy" alt="Creatine"
+                    class="img-cover" />
+
+                  <span class="badge" aria-label="20% off">-20%</span>
+
+                  <div class="card-actions">
+                    <button class="action-btn" aria-label="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+
+                    <button class="action-btn" aria-label="add to whishlist">
+                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                    </button>
+
+                    <button class="action-btn" aria-label="compare">
+                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <div class="price">
+                    <del class="del">₹1299</del>
+
+                    <span class="span">₹1,049</span>
+                  </div>
+
+                  <h3>
+                    <a href="#" class="card-title">Creatine + Pre-Workout(500mg Caffeine)</a>
+                  </h3>
+
+                  <div class="card-rating">
+                    <div class="rating-wrapper" aria-label="5 start rating">
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    </div>
+
+                    <p class="rating-text">1048 reviews</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="shop-card">
+                <div class="card-banner img-holder" style="--width: 540; --height: 720">
+                  <img src="./assets/images/Sipper.png" width="540" height="720" loading="lazy" alt="Multivitamins"
+                    class="img-cover" />
+
+                  <div class="card-actions">
+                    <button class="action-btn" aria-label="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+
+                    <button class="action-btn" aria-label="add to whishlist">
+                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                    </button>
+
+                    <button class="action-btn" aria-label="compare">
+                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <div class="price">
+                    <span class="span">₹899</span>
+                  </div>
+
+                  <h3>
+                    <a href="#" class="card-title">BeastLife Blend Pro Sipper with Straw | 1000ML</a>
+                  </h3>
+
+                  <div class="card-rating">
+                    <div class="rating-wrapper" aria-label="5 start rating">
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    </div>
+
+                    <p class="rating-text">236 reviews</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="shop-card">
+                <div class="card-banner img-holder" style="--width: 540; --height: 720">
+                  <img src="./assets/images/Fish_Oil.jpg" width="540" height="720" loading="lazy" alt="Fish Oil"
+                    class="img-cover" />
+
+                  <div class="card-actions">
+                    <button class="action-btn" aria-label="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+
+                    <button class="action-btn" aria-label="add to whishlist">
+                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                    </button>
+
+                    <button class="action-btn" aria-label="compare">
+                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <div class="price">
+                    <span class="span">₹699</span>
+                  </div>
+
+                  <h3>
+                    <a href="#" class="card-title">Omega 3 Fish Oil with 180mg EPA and 120mg DHA</a>
+                  </h3>
+
+                  <div class="card-rating">
+                    <div class="rating-wrapper" aria-label="5 start rating">
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    </div>
+
+                    <p class="rating-text">342 reviews</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="shop-card">
+                <div class="card-banner img-holder" style="--width: 540; --height: 720">
+                  <img src="./assets/images/Micronized_Monohydrate.png" width="540" height="720" loading="lazy"
+                    alt="Coffee Bean Caffeine Eye Cream" class="img-cover" />
+
+                  <span class="badge" aria-label="20% off">-20%</span>
+
+                  <div class="card-actions">
+                    <button class="action-btn" aria-label="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+
+                    <button class="action-btn" aria-label="add to whishlist">
+                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                    </button>
+
+                    <button class="action-btn" aria-label="compare">
+                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <div class="price">
+                    <del class="del">₹1,499</del>
+
+                    <span class="span">₹1,199</span>
+                  </div>
+
+                  <h3>
+                    <a href="#" class="card-title">
+                      Super Micronized Creatine Monohydrate</a>
+                  </h3>
+
+                  <div class="card-rating">
+                    <div class="rating-wrapper" aria-label="5 start rating">
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    </div>
+
+                    <p class="rating-text">5170 reviews</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="shop-card">
+                <div class="card-banner img-holder" style="--width: 540; --height: 720">
+                  <img src="./assets/images/Isorich_Blend_Whey.png" width="540" height="720" loading="lazy"
+                    alt="Facial cleanser" class="img-cover" />
+
+                  <div class="card-actions">
+                    <button class="action-btn" aria-label="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+
+                    <button class="action-btn" aria-label="add to whishlist">
+                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                    </button>
+
+                    <button class="action-btn" aria-label="compare">
+                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <div class="price">
+                    <span class="span">₹3,499</span>
+                  </div>
+
+                  <h3>
+                    <a href="#" class="card-title">Isorich Blend Whey Protein with Ultrasorb Tech |
+                      924G</a>
+                  </h3>
+
+                  <div class="card-rating">
+                    <div class="rating-wrapper" aria-label="5 start rating">
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    </div>
+
+                    <p class="rating-text">5170 reviews</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 
         - #BANNER
       -->
 
-        <section class="section banner" aria-label="banner" data-section>
-          <div class="container">
-            <ul class="banner-list">
-              <li>
-                <div class="banner-card banner-card-1 has-before hover:shine">
-                  <p class="card-subtitle">New Collection</p>
+      <section class="section banner" aria-label="banner" data-section>
+        <div class="container">
+          <ul class="banner-list">
+            <li>
+              <div class="banner-card banner-card-1 has-before hover:shine">
+                <p class="card-subtitle">New Collection</p>
 
-                  <h2 class="h2 card-title">Discover The 5 New Flavors!</h2>
+                <h2 class="h2 card-title">Discover The 5 New Flavors!</h2>
 
-                  <a href="#" class="btn btn-secondary">Explore More</a>
+                <a href="#" class="btn btn-secondary">Explore More</a>
 
-                  <div
-                    class="has-bg-image"
-                    style="
+                <div class="has-bg-image" style="
                       background-image: url('./assets/images/banner-1.png');
-                    "
-                  ></div>
-                </div>
-              </li>
+                    "></div>
+              </div>
+            </li>
 
-              <li>
-                <div class="banner-card banner-card-2 has-before hover:shine">
-                  <h2 class="h2 card-title">10% off Everything</h2>
+            <li>
+              <div class="banner-card banner-card-2 has-before hover:shine">
+                <h2 class="h2 card-title">10% off Everything</h2>
 
-                  <p class="card-text">
-                    New Supplements Launched with <br />
-                    5 Exciting New Flavors!
-                  </p>
+                <p class="card-text">
+                  New Supplements Launched with <br />
+                  5 Exciting New Flavors!
+                </p>
 
-                  <a href="#" class="btn btn-secondary">Shop Sale</a>
+                <a href="#" class="btn btn-secondary">Shop Sale</a>
 
-                  <div
-                    class="has-bg-image"
-                    style="
+                <div class="has-bg-image" style="
                       background-image: url('./assets/images/banner-2.jpg');
-                    "
-                  ></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
+                    "></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <!-- 
+      <!-- 
         - #FEATURE
       -->
 
-        <section class="section feature" aria-label="feature" data-section>
-          <div class="container">
-            <h2 class="h2-large section-title">Why Shop At BeastLife?</h2>
+      <section class="section feature" aria-label="feature" data-section>
+        <div class="container">
+          <h2 class="h2-large section-title">Why Shop At BeastLife?</h2>
 
-            <ul class="flex-list">
-              <li class="flex-item">
-                <div class="feature-card">
-                  <img
-                    src="./assets/images/Clinically_Tested.png"
-                    width="204"
-                    height="236"
-                    loading="lazy"
-                    alt="Guaranteed PURE"
-                    class="card-icon"
-                  />
+          <ul class="flex-list">
+            <li class="flex-item">
+              <div class="feature-card">
+                <img src="./assets/images/Clinically_Tested.png" width="204" height="236" loading="lazy"
+                  alt="Guaranteed PURE" class="card-icon" />
 
-                  <h3 class="h3 card-title">Clinically-Tested</h3>
+                <h3 class="h3 card-title">Clinically-Tested</h3>
 
-                  <p class="card-text">
-                    "Clinically tested for proven results and safety, ensuring
-                    you receive the highest quality and most effective
-                    products."
-                  </p>
-                </div>
-              </li>
+                <p class="card-text">
+                  "Clinically tested for proven results and safety, ensuring
+                  you receive the highest quality and most effective
+                  products."
+                </p>
+              </div>
+            </li>
 
-              <li class="flex-item">
-                <div class="feature-card">
-                  <img
-                    src="./assets/images/no-outsourcing.png"
-                    width="204"
-                    height="236"
-                    loading="lazy"
-                    alt="Completely Cruelty-Free"
-                    class="card-icon"
-                  />
+            <li class="flex-item">
+              <div class="feature-card">
+                <img src="./assets/images/no-outsourcing.png" width="204" height="236" loading="lazy"
+                  alt="Completely Cruelty-Free" class="card-icon" />
 
-                  <h3 class="h3 card-title">No Outsourcing</h3>
+                <h3 class="h3 card-title">No Outsourcing</h3>
 
-                  <p class="card-text">
-                    "Produced in-house with no outsourcing to ensure superior
-                    quality control and consistency in every product we offer."
-                  </p>
-                </div>
-              </li>
+                <p class="card-text">
+                  "Produced in-house with no outsourcing to ensure superior
+                  quality control and consistency in every product we offer."
+                </p>
+              </div>
+            </li>
 
-              <li class="flex-item">
-                <div class="feature-card">
-                  <img
-                    src="./assets/images/Pure.jpg"
-                    width="204"
-                    height="236"
-                    loading="lazy"
-                    alt="Ingredient Sourcing"
-                    class="card-icon"
-                  />
+            <li class="flex-item">
+              <div class="feature-card">
+                <img src="./assets/images/Pure.jpg" width="204" height="236" loading="lazy" alt="Ingredient Sourcing"
+                  class="card-icon" />
 
-                  <h3 class="h3 card-title">Guaranteed PURE</h3>
+                <h3 class="h3 card-title">Guaranteed PURE</h3>
 
-                  <p class="card-text">
-                    All Grace formulations adhere to strict purity standards and
-                    will never contain harsh or toxic ingredients
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
+                <p class="card-text">
+                  All Grace formulations adhere to strict purity standards and
+                  will never contain harsh or toxic ingredients
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <!-- 
+      <!-- 
         - #OFFER
       -->
 
-        <section
-          class="section offer"
-          id="offer"
-          aria-label="offer"
-          data-section
-        >
-          <div class="container">
-            <figure class="offer-banner">
-              <img
-                src="./assets/images/GymBro Stack.png"
-                width="305"
-                height="408"
-                loading="lazy"
-                alt="offer products"
-                class="w-100"
-              />
+      <section class="section offer" id="offer" aria-label="offer" data-section>
+        <div class="container">
+          <figure class="offer-banner">
+            <img src="./assets/images/GymBro Stack.png" width="305" height="408" loading="lazy" alt="offer products"
+              class="w-100" />
 
-              <img
-                src="./assets/images/Gymbro_Stack2.png"
-                width="450"
-                height="625"
-                loading="lazy"
-                alt="offer products"
-                class="w-100"
-              />
-            </figure>
+            <img src="./assets/images/Gymbro_Stack2.png" width="450" height="625" loading="lazy" alt="offer products"
+              class="w-100" />
+          </figure>
 
-            <div class="offer-content">
-              <p class="offer-subtitle">
-                <span class="span">Special Offer</span>
+          <div class="offer-content">
+            <p class="offer-subtitle">
+              <span class="span">Special Offer</span>
 
-                <span class="badge" aria-label="20% off">-20%</span>
-              </p>
+              <span class="badge" aria-label="20% off">-20%</span>
+            </p>
 
-              <h2 class="h2-large section-title">
-                GymBro Stack <br />Friendship Day Special
-              </h2>
+            <h2 class="h2-large section-title">
+              GymBro Stack <br />Friendship Day Special
+            </h2>
 
-              <p class="section-text">
-                2 Pro Whey Chocolate (924g each) + 2 Creatine (100g each). Say
-                hello to The Gym Bro Stack! This combo is designed to turn every
-                workout into an ultimate experience for you!
-              </p>
+            <p class="section-text">
+              2 Pro Whey Chocolate (924g each) + 2 Creatine (100g each). Say
+              hello to The Gym Bro Stack! This combo is designed to turn every
+              workout into an ultimate experience for you!
+            </p>
 
-              <div class="countdown">
-                <span class="time" aria-label="days">15</span>
-                <span class="time" aria-label="hours">21</span>
-                <span class="time" aria-label="minutes">46</span>
-                <span class="time" aria-label="seconds">08</span>
-              </div>
-
-              <a href="#" class="btn btn-primary">Get Only ₹4999.00</a>
+            <div class="countdown">
+              <span class="time" aria-label="days">15</span>
+              <span class="time" aria-label="hours">21</span>
+              <span class="time" aria-label="minutes">46</span>
+              <span class="time" aria-label="seconds">08</span>
             </div>
-          </div>
-        </section>
-      </article>
-    </main>
 
-    <!-- 
+            <a href="#" class="btn btn-primary">Get Only ₹4999.00</a>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- 
     - #FOOTER
   -->
 
-    <footer class="footer" data-section>
-      <div class="container">
-        <div class="footer-top">
-          <ul class="footer-list">
-            <li>
-              <p class="footer-list-title">Company</p>
-            </li>
+  <footer class="footer" data-section>
+    <div class="container">
+      <div class="footer-top">
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
 
-            <li>
-              <p class="footer-list-text">
-                Find a location near you. See
-                <a href="#" class="link">Our Stores</a>
-              </p>
-            </li>
-
-            <li>
-              <p class="footer-list-text bold">+91 35 2568 4593</p>
-            </li>
-
-            <li>
-              <p class="footer-list-text">BNNutrition@gmail.com</p>
-            </li>
-          </ul>
-
-          <ul class="footer-list">
-            <li>
-              <p class="footer-list-title">Useful links</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">New Products</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Best Sellers</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Bundle & Save</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Online Gift Card</a>
-            </li>
-          </ul>
-
-          <ul class="footer-list">
-            <li>
-              <p class="footer-list-title">Infomation</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Start a Return</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Contact Us</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Shipping FAQ</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Terms & Conditions</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Privacy Policy</a>
-            </li>
-          </ul>
-
-          <div class="footer-list">
-            <p class="newsletter-title">Good emails.</p>
-
-            <p class="newsletter-text">
-              Enter your email below to be the first to know about new
-              collections and product launches.
+          <li>
+            <p class="footer-list-text">
+              Find a location near you. See
+              <a href="#" class="link">Our Stores</a>
             </p>
+          </li>
 
-            <form action="" class="newsletter-form">
-              <input
-                type="email"
-                name="email_address"
-                placeholder="Enter your email address"
-                required
-                class="email-field"
-              />
+          <li>
+            <p class="footer-list-text bold">+91 35 2568 4593</p>
+          </li>
 
-              <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
-          </div>
-        </div>
+          <li>
+            <p class="footer-list-text">BNNutrition@gmail.com</p>
+          </li>
+        </ul>
 
-        <div class="footer-bottom">
-          <div class="wrapper">
-            <p class="copyright">&copy; 2022 BeastLife Nutrition</p>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Useful links</p>
+          </li>
 
-            <ul class="social-list">
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
+          <li>
+            <a href="#" class="footer-link">New Products</a>
+          </li>
 
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
+          <li>
+            <a href="#" class="footer-link">Best Sellers</a>
+          </li>
 
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
+          <li>
+            <a href="#" class="footer-link">Bundle & Save</a>
+          </li>
 
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <li>
+            <a href="#" class="footer-link">Online Gift Card</a>
+          </li>
+        </ul>
 
-          <a href="#" class="logo">
-            <img
-              src="./assets/images/logo.png"
-              width="179"
-              height="26"
-              loading="lazy"
-              alt="Glowing"
-            />
-          </a>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Infomation</p>
+          </li>
 
-          <img
-            src="./assets/images/pay.png"
-            width="313"
-            height="28"
-            alt="available all payment method"
-            class="w-100"
-          />
+          <li>
+            <a href="#" class="footer-link">Start a Return</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Shipping FAQ</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+        </ul>
+
+        <div class="footer-list">
+          <p class="newsletter-title">Good emails.</p>
+
+          <p class="newsletter-text">
+            Enter your email below to be the first to know about new
+            collections and product launches.
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Enter your email address" required
+              class="email-field" />
+
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
         </div>
       </div>
-    </footer>
 
-    <!-- 
+      <div class="footer-bottom">
+        <div class="wrapper">
+          <p class="copyright">&copy; 2022 BeastLife Nutrition</p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.png" width="179" height="26" loading="lazy" alt="Glowing" />
+        </a>
+
+        <img src="./assets/images/pay.png" width="313" height="28" alt="available all payment method" class="w-100" />
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
     - #BACK TO TOP
   -->
 
-    <a
-      href="#top"
-      class="back-top-btn"
-      aria-label="back to top"
-      data-back-top-btn
-    >
-      <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
-    </a>
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
 
-    <!-- 
+  <!-- 
     - custom js link
   -->
-    <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/script.js" defer></script>
 
-    <!-- 
+  <!-- 
     - ionicon link
   -->
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script>
-      // CSS styles as a string
-      const styles = `
+  <script>
+    
+    // CSS styles as a string
+    const styles = `
           h1 {
               margin-bottom: 20px;
           }
@@ -1559,27 +1350,38 @@
           .toast.show {
               opacity: 1;
           }
+          .slide-container {
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
       `;
 
-      // Create a style element and append it to the head
-      const styleSheet = document.createElement("style");
-      styleSheet.type = "text/css";
-      styleSheet.innerText = styles;
-      document.head.appendChild(styleSheet);
+    // Create a style element and append it to the head
+    const styleSheet = document.createElement("style");
+    styleSheet.type = "text/css";
+    styleSheet.innerText = styles;
+    document.head.appendChild(styleSheet);
 
-      const apiUrl = "http://localhost:3000";
-      const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+    const apiUrl = "http://localhost:3000";
+    const token = localStorage.getItem("token"); // Retrieve the token from localStorage
 
-      async function fetchProducts() {
-          try {
-              const response = await fetch(`${apiUrl}/products`);
-              const products = await response.json();
-              const productsDiv = document.getElementById("products");
+    async function fetchProducts() {
+      try {
+        const response = await fetch(`${apiUrl}/products`);
+        const products = await response.json();
+        const productsDiv = document.getElementById("products");
 
-              products.forEach((product) => {
-                  const productDiv = document.createElement("div");
-                  productDiv.className = "product";
-                  productDiv.innerHTML = `
+        products.forEach((product) => {
+          const productDiv = document.createElement("div");
+          productDiv.className = "product";
+          productDiv.innerHTML = `
                       <div class="card-banner">
                           <img src="${product.image}" alt="${product.name}">
                       </div>
@@ -1588,48 +1390,67 @@
                       <h2 class="price2">Price: ₹${product.price}</h2>
                       <button onclick="addToCart('${product._id}')">Add to Cart</button>
                   `;
-                  productsDiv.appendChild(productDiv);
-              });
-          } catch (error) {
-              showToast("Error fetching products.");
-          }
+          productsDiv.appendChild(productDiv);
+        });
+      } catch (error) {
+        showToast("Error fetching products.");
       }
+    }
 
-      async function addToCart(productId) {
-          try {
-              const response = await fetch(`${apiUrl}/cart`, {
-                  method: "POST",
-                  headers: {
-                      "Content-Type": "application/json",
-                      Authorization: `Bearer ${token}`, // Include the token in the Authorization header
-                  },
-                  body: JSON.stringify({ productId, quantity: 1 }),
-              });
+    async function addToCart(productId) {
+      try {
+        const response = await fetch(`${apiUrl}/cart`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+          },
+          body: JSON.stringify({ productId, quantity: 1 }),
+        });
 
-              const data = await response.json();
-              if (response.ok) {
-                  showToast("Product added to cart successfully!");
-              } else if (response.status === 401) { // User not found
-                  window.location.href = '/login.html';
-              } else {
-                  showToast(data.message || "Error adding to cart.");
-              }
-          } catch (error) {
-              showToast("Error adding to cart.");
-          }
+        const data = await response.json();
+        if (response.ok) {
+          showToast("Product added to cart successfully!");
+        } else if (response.status === 401) { // User not found
+          window.location.href = '/login.html';
+        } else {
+          showToast(data.message || "Error adding to cart.");
+        }
+      } catch (error) {
+        showToast("Error adding to cart.");
       }
+    }
 
-      function showToast(message) {
-          const toast = document.getElementById("toast");
-          toast.innerText = message;
-          toast.classList.add("show");
-          setTimeout(() => {
-              toast.classList.remove("show");
-          }, 3000); // Show toast for 3 seconds
-      }
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.innerText = message;
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000); // Show toast for 3 seconds
+    }
 
-      // Fetch and display products on page load
-      fetchProducts();
+    // Fetch and display products on page load
+    fetchProducts();
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(n) {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+      });
+
+      slides[n].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    
+    setInterval(nextSlide, 3000); 
   </script>
-  </body>
+</body>
+
 </html>
